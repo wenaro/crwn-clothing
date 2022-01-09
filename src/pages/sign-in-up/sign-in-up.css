@@ -1,1 +1,6 @@
-
+.sign-in-up {
+    display: flex;
+    width: 850px;
+    justify-content: space-between;
+    margin: auto auto;
+}
