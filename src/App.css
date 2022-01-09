@@ -9,5 +9,6 @@ a {
 }
 
 * {
+    /* nie dodaje automatycznie paddingu do elementow i sa rowne */
     box-sizing: border-box;
 }
