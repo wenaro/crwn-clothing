@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/crown.svg'
 import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
+import CartIcon from '../cart-icon/cart-icon';
+import CartDropdown from '../cart-dropdown/cart-dropdown';
 
-const Header = ({currentUser}) => {
-  
+const Header = ({ currentUser }) => {
+
   console.log(currentUser);
   return (
     <div className="header">
@@ -31,10 +33,13 @@ const Header = ({currentUser}) => {
             SIGN IN
           </Link>
         )}
+
+        <CartIcon />
       </div>
+      <CartDropdown></CartDropdown>
     </div>
   );
-} 
+}
 // state = top level root reducer
 const mapStateToProps = state => ({
   currentUser: state.user.currentUser
